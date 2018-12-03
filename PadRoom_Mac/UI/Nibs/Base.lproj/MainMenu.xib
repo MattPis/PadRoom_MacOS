@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="PadRoom_Mac" customModuleProvider="target"/>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu id="7wb-az-SQj" customClass="MainMenuController" customModule="PadRoom_Mac" customModuleProvider="target">
+            <items>
+                <menuItem title="Status" id="PRM-2e-5If">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="4On-jH-piu"/>
+                <menuItem title="Restart" id="TP2-gh-MaS">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="restartTapped:" target="7wb-az-SQj" id="Nxm-gf-ej1"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="mzo-wN-nEI"/>
+                <menuItem title="Quit" id="3vc-CJ-hll">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitTapped:" target="7wb-az-SQj" id="4LN-J8-hLz"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <connections>
+                <outlet property="statusDetailView" destination="Lka-XV-LxP" id="GQD-2p-J4M"/>
+            </connections>
+            <point key="canvasLocation" x="-3352.5" y="85"/>
+        </menu>
+        <customView identifier="StatusDetail" id="Lka-XV-LxP" customClass="StatusDetail" customModule="PadRoom_Mac" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="184" height="84"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Eiu-aC-DOV">
+                    <rect key="frame" x="-1" y="58" width="185" height="17"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Lightroom: Not Connected" id="zpc-4D-nes">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oIj-XN-fVW">
+                    <rect key="frame" x="0.0" y="33" width="185" height="17"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="iPad: Not Connected" id="D50-if-CaD">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="z7W-in-Yeh">
+                    <rect key="frame" x="0.0" y="8" width="185" height="17"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="IP: " id="DdS-uJ-nek">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Eiu-aC-DOV" secondAttribute="trailing" constant="2" id="53l-cl-tZI"/>
+                <constraint firstItem="oIj-XN-fVW" firstAttribute="leading" secondItem="Lka-XV-LxP" secondAttribute="leading" constant="2" id="DPc-EF-djg"/>
+                <constraint firstItem="z7W-in-Yeh" firstAttribute="leading" secondItem="Lka-XV-LxP" secondAttribute="leading" constant="2" id="LCf-48-hjP"/>
+                <constraint firstItem="oIj-XN-fVW" firstAttribute="top" secondItem="Eiu-aC-DOV" secondAttribute="bottom" constant="8" id="OLX-1X-Jxb"/>
+                <constraint firstItem="Eiu-aC-DOV" firstAttribute="leading" secondItem="Lka-XV-LxP" secondAttribute="leading" constant="1" id="PmQ-qN-8Ip"/>
+                <constraint firstAttribute="trailing" secondItem="oIj-XN-fVW" secondAttribute="trailing" constant="1" id="WIC-Bl-AV3"/>
+                <constraint firstItem="z7W-in-Yeh" firstAttribute="top" secondItem="oIj-XN-fVW" secondAttribute="bottom" constant="8" id="ijf-qa-x2y"/>
+                <constraint firstAttribute="bottom" secondItem="z7W-in-Yeh" secondAttribute="bottom" constant="8" id="mM6-mg-3Nn"/>
+                <constraint firstItem="Eiu-aC-DOV" firstAttribute="top" secondItem="Lka-XV-LxP" secondAttribute="top" constant="9" id="tl7-Zn-OPL"/>
+                <constraint firstAttribute="trailing" secondItem="z7W-in-Yeh" secondAttribute="trailing" constant="1" id="zRD-8R-iC1"/>
+            </constraints>
+            <connections>
+                <outlet property="iPadLabel" destination="oIj-XN-fVW" id="pQ5-AQ-VMc"/>
+                <outlet property="ipAddressLabel" destination="z7W-in-Yeh" id="K1d-ez-RPB"/>
+                <outlet property="lightroomLabel" destination="Eiu-aC-DOV" id="03b-Ba-Iul"/>
+            </connections>
+            <point key="canvasLocation" x="149" y="239"/>
+        </customView>
+    </objects>
+</document>

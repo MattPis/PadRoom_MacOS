@@ -7,11 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21AAA41AEBCA847F5DFAFB56 /* Pods_PadRoom_MacTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7968E3AE67F15DA205D26B82 /* Pods_PadRoom_MacTests.framework */; };
+		529FEF8982C4EFA569914FD1 /* Pods_PadRoom_Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA53E80EC18D4EF5B10B5E1 /* Pods_PadRoom_Mac.framework */; };
 		C97A608521A89566001F9D48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A608421A89566001F9D48 /* AppDelegate.swift */; };
 		C97A608721A89567001F9D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97A608621A89567001F9D48 /* Assets.xcassets */; };
 		C97A608A21A89567001F9D48 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97A608821A89567001F9D48 /* MainMenu.xib */; };
 		C97A609621A89567001F9D48 /* PadRoom_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A609521A89567001F9D48 /* PadRoom_MacTests.swift */; };
 		C97A60A121A89567001F9D48 /* PadRoom_MacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A60A021A89567001F9D48 /* PadRoom_MacUITests.swift */; };
+		C97A60B121A8AB41001F9D48 /* SocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A60B021A8AB41001F9D48 /* SocketServer.swift */; };
+		C97A60B421A8B29A001F9D48 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A60B321A8B29A001F9D48 /* Constants.swift */; };
+		C97A60B621ADBFF9001F9D48 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A60B521ADBFF9001F9D48 /* NetworkManager.swift */; };
+		C97A60BB21AE23EA001F9D48 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A60BA21AE23EA001F9D48 /* MainMenuController.swift */; };
+		C97A60BD21AE24A3001F9D48 /* StatusDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A60BC21AE24A3001F9D48 /* StatusDetail.swift */; };
+		C97A60BF21AF3702001F9D48 /* LightroomClinet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A60BE21AF3702001F9D48 /* LightroomClinet.swift */; };
+		DE0CA44AE4A8D93A6D6C8B3B /* Pods_PadRoom_MacUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152CFD0C451F333790798250 /* Pods_PadRoom_MacUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		152CFD0C451F333790798250 /* Pods_PadRoom_MacUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PadRoom_MacUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		241A59FCA06B35994F75CA8C /* Pods-PadRoom_Mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PadRoom_Mac.debug.xcconfig"; path = "Target Support Files/Pods-PadRoom_Mac/Pods-PadRoom_Mac.debug.xcconfig"; sourceTree = "<group>"; };
+		524968173D02BA06231AB64F /* Pods-PadRoom_MacUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PadRoom_MacUITests.release.xcconfig"; path = "Target Support Files/Pods-PadRoom_MacUITests/Pods-PadRoom_MacUITests.release.xcconfig"; sourceTree = "<group>"; };
+		654B33A292C238CCE02A23B0 /* Pods-PadRoom_MacTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PadRoom_MacTests.release.xcconfig"; path = "Target Support Files/Pods-PadRoom_MacTests/Pods-PadRoom_MacTests.release.xcconfig"; sourceTree = "<group>"; };
+		7968E3AE67F15DA205D26B82 /* Pods_PadRoom_MacTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PadRoom_MacTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AA53E80EC18D4EF5B10B5E1 /* Pods_PadRoom_Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PadRoom_Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		813E1AEAD7A7CB2CA2E74DFC /* Pods-PadRoom_MacTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PadRoom_MacTests.debug.xcconfig"; path = "Target Support Files/Pods-PadRoom_MacTests/Pods-PadRoom_MacTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9F6D80537205E455C43BC818 /* Pods-PadRoom_Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PadRoom_Mac.release.xcconfig"; path = "Target Support Files/Pods-PadRoom_Mac/Pods-PadRoom_Mac.release.xcconfig"; sourceTree = "<group>"; };
 		C97A608121A89566001F9D48 /* PadRoom_Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PadRoom_Mac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97A608421A89566001F9D48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C97A608621A89567001F9D48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +61,13 @@
 		C97A609C21A89567001F9D48 /* PadRoom_MacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PadRoom_MacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97A60A021A89567001F9D48 /* PadRoom_MacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadRoom_MacUITests.swift; sourceTree = "<group>"; };
 		C97A60A221A89567001F9D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C97A60B021A8AB41001F9D48 /* SocketServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketServer.swift; sourceTree = "<group>"; };
+		C97A60B321A8B29A001F9D48 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C97A60B521ADBFF9001F9D48 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C97A60BA21AE23EA001F9D48 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
+		C97A60BC21AE24A3001F9D48 /* StatusDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusDetail.swift; sourceTree = "<group>"; };
+		C97A60BE21AF3702001F9D48 /* LightroomClinet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightroomClinet.swift; sourceTree = "<group>"; };
+		EE89B0E77992EF60DE60FF3C /* Pods-PadRoom_MacUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PadRoom_MacUITests.debug.xcconfig"; path = "Target Support Files/Pods-PadRoom_MacUITests/Pods-PadRoom_MacUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529FEF8982C4EFA569914FD1 /* Pods_PadRoom_Mac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21AAA41AEBCA847F5DFAFB56 /* Pods_PadRoom_MacTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,12 +91,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE0CA44AE4A8D93A6D6C8B3B /* Pods_PadRoom_MacUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6823BB5B2767E5BFAFD198B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				241A59FCA06B35994F75CA8C /* Pods-PadRoom_Mac.debug.xcconfig */,
+				9F6D80537205E455C43BC818 /* Pods-PadRoom_Mac.release.xcconfig */,
+				813E1AEAD7A7CB2CA2E74DFC /* Pods-PadRoom_MacTests.debug.xcconfig */,
+				654B33A292C238CCE02A23B0 /* Pods-PadRoom_MacTests.release.xcconfig */,
+				EE89B0E77992EF60DE60FF3C /* Pods-PadRoom_MacUITests.debug.xcconfig */,
+				524968173D02BA06231AB64F /* Pods-PadRoom_MacUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C354A897548F670219A93838 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AA53E80EC18D4EF5B10B5E1 /* Pods_PadRoom_Mac.framework */,
+				7968E3AE67F15DA205D26B82 /* Pods_PadRoom_MacTests.framework */,
+				152CFD0C451F333790798250 /* Pods_PadRoom_MacUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C97A607821A89566001F9D48 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +128,8 @@
 				C97A609421A89567001F9D48 /* PadRoom_MacTests */,
 				C97A609F21A89567001F9D48 /* PadRoom_MacUITests */,
 				C97A608221A89566001F9D48 /* Products */,
+				6823BB5B2767E5BFAFD198B0 /* Pods */,
+				C354A897548F670219A93838 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,11 +146,13 @@
 		C97A608321A89566001F9D48 /* PadRoom_Mac */ = {
 			isa = PBXGroup;
 			children = (
+				C97A60B721AE239D001F9D48 /* UI */,
+				C97A60B221A8B273001F9D48 /* Network */,
 				C97A608421A89566001F9D48 /* AppDelegate.swift */,
 				C97A608621A89567001F9D48 /* Assets.xcassets */,
-				C97A608821A89567001F9D48 /* MainMenu.xib */,
 				C97A608B21A89567001F9D48 /* Info.plist */,
 				C97A608C21A89567001F9D48 /* PadRoom_Mac.entitlements */,
+				C97A60B321A8B29A001F9D48 /* Constants.swift */,
 			);
 			path = PadRoom_Mac;
 			sourceTree = "<group>";
@@ -121,6 +175,42 @@
 			path = PadRoom_MacUITests;
 			sourceTree = "<group>";
 		};
+		C97A60B221A8B273001F9D48 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C97A60B021A8AB41001F9D48 /* SocketServer.swift */,
+				C97A60B521ADBFF9001F9D48 /* NetworkManager.swift */,
+				C97A60BE21AF3702001F9D48 /* LightroomClinet.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C97A60B721AE239D001F9D48 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C97A60B921AE23D9001F9D48 /* Classes */,
+				C97A60B821AE23C9001F9D48 /* Nibs */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C97A60B821AE23C9001F9D48 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				C97A608821A89567001F9D48 /* MainMenu.xib */,
+			);
+			path = Nibs;
+			sourceTree = "<group>";
+		};
+		C97A60B921AE23D9001F9D48 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C97A60BA21AE23EA001F9D48 /* MainMenuController.swift */,
+				C97A60BC21AE24A3001F9D48 /* StatusDetail.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C97A60A521A89567001F9D48 /* Build configuration list for PBXNativeTarget "PadRoom_Mac" */;
 			buildPhases = (
+				C3CF05571F28F142ED49AA07 /* [CP] Check Pods Manifest.lock */,
 				C97A607D21A89566001F9D48 /* Sources */,
 				C97A607E21A89566001F9D48 /* Frameworks */,
 				C97A607F21A89566001F9D48 /* Resources */,
+				A7A28D6E9315889F9CA80881 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,6 +237,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C97A60A821A89567001F9D48 /* Build configuration list for PBXNativeTarget "PadRoom_MacTests" */;
 			buildPhases = (
+				5A556866C8B1D90CA12DDB8A /* [CP] Check Pods Manifest.lock */,
 				C97A608D21A89567001F9D48 /* Sources */,
 				C97A608E21A89567001F9D48 /* Frameworks */,
 				C97A608F21A89567001F9D48 /* Resources */,
@@ -163,6 +256,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C97A60AB21A89567001F9D48 /* Build configuration list for PBXNativeTarget "PadRoom_MacUITests" */;
 			buildPhases = (
+				6E53F280EFC2DF49E6C8BE15 /* [CP] Check Pods Manifest.lock */,
 				C97A609821A89567001F9D48 /* Sources */,
 				C97A609921A89567001F9D48 /* Frameworks */,
 				C97A609A21A89567001F9D48 /* Resources */,
@@ -246,12 +340,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5A556866C8B1D90CA12DDB8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PadRoom_MacTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E53F280EFC2DF49E6C8BE15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PadRoom_MacUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7A28D6E9315889F9CA80881 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PadRoom_Mac/Pods-PadRoom_Mac-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PadRoom_Mac/Pods-PadRoom_Mac-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3CF05571F28F142ED49AA07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PadRoom_Mac-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C97A607D21A89566001F9D48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97A60B621ADBFF9001F9D48 /* NetworkManager.swift in Sources */,
+				C97A60B121A8AB41001F9D48 /* SocketServer.swift in Sources */,
+				C97A60BD21AE24A3001F9D48 /* StatusDetail.swift in Sources */,
 				C97A608521A89566001F9D48 /* AppDelegate.swift in Sources */,
+				C97A60BF21AF3702001F9D48 /* LightroomClinet.swift in Sources */,
+				C97A60B421A8B29A001F9D48 /* Constants.swift in Sources */,
+				C97A60BB21AE23EA001F9D48 /* MainMenuController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +606,7 @@
 		};
 		C97A60A621A89567001F9D48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 241A59FCA06B35994F75CA8C /* Pods-PadRoom_Mac.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PadRoom_Mac/PadRoom_Mac.entitlements;
@@ -434,6 +626,7 @@
 		};
 		C97A60A721A89567001F9D48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F6D80537205E455C43BC818 /* Pods-PadRoom_Mac.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PadRoom_Mac/PadRoom_Mac.entitlements;
@@ -453,6 +646,7 @@
 		};
 		C97A60A921A89567001F9D48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 813E1AEAD7A7CB2CA2E74DFC /* Pods-PadRoom_MacTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -474,6 +668,7 @@
 		};
 		C97A60AA21A89567001F9D48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 654B33A292C238CCE02A23B0 /* Pods-PadRoom_MacTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -495,6 +690,7 @@
 		};
 		C97A60AC21A89567001F9D48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE89B0E77992EF60DE60FF3C /* Pods-PadRoom_MacUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -515,6 +711,7 @@
 		};
 		C97A60AD21A89567001F9D48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 524968173D02BA06231AB64F /* Pods-PadRoom_MacUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
