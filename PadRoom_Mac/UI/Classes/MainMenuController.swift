@@ -13,7 +13,7 @@ class MainMenuController: NSMenu {
     @IBOutlet weak var statusDetailView: StatusDetail!
     
     var statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-    
+
     override func awakeFromNib() {
         setupUi()
     }
@@ -38,4 +38,5 @@ class MainMenuController: NSMenu {
     @IBAction func restartTapped(_ sender: Any) {
         NetworkManager.shared.restartService()
     }
+    
 }

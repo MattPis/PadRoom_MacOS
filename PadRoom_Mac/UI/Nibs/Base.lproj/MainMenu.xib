@@ -40,11 +40,11 @@
             <point key="canvasLocation" x="-3352.5" y="85"/>
         </menu>
         <customView identifier="StatusDetail" id="Lka-XV-LxP" customClass="StatusDetail" customModule="PadRoom_Mac" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="184" height="84"/>
+            <rect key="frame" x="0.0" y="0.0" width="184" height="109"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Eiu-aC-DOV">
-                    <rect key="frame" x="-1" y="58" width="185" height="17"/>
+                    <rect key="frame" x="-1" y="83" width="185" height="17"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Lightroom: Not Connected" id="zpc-4D-nes">
                         <font key="font" usesAppearanceFont="YES"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -52,7 +52,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oIj-XN-fVW">
-                    <rect key="frame" x="0.0" y="33" width="185" height="17"/>
+                    <rect key="frame" x="0.0" y="58" width="185" height="17"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="iPad: Not Connected" id="D50-if-CaD">
                         <font key="font" usesAppearanceFont="YES"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -67,25 +67,37 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Skn-Cx-sXh">
+                    <rect key="frame" x="-2" y="33" width="188" height="17"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="PowerMate: Not Connected" id="4n8-4m-R7S">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <constraints>
+                <constraint firstItem="z7W-in-Yeh" firstAttribute="top" secondItem="Skn-Cx-sXh" secondAttribute="bottom" constant="8" id="0Pg-yg-lE6"/>
                 <constraint firstAttribute="trailing" secondItem="Eiu-aC-DOV" secondAttribute="trailing" constant="2" id="53l-cl-tZI"/>
                 <constraint firstItem="oIj-XN-fVW" firstAttribute="leading" secondItem="Lka-XV-LxP" secondAttribute="leading" constant="2" id="DPc-EF-djg"/>
                 <constraint firstItem="z7W-in-Yeh" firstAttribute="leading" secondItem="Lka-XV-LxP" secondAttribute="leading" constant="2" id="LCf-48-hjP"/>
                 <constraint firstItem="oIj-XN-fVW" firstAttribute="top" secondItem="Eiu-aC-DOV" secondAttribute="bottom" constant="8" id="OLX-1X-Jxb"/>
                 <constraint firstItem="Eiu-aC-DOV" firstAttribute="leading" secondItem="Lka-XV-LxP" secondAttribute="leading" constant="1" id="PmQ-qN-8Ip"/>
                 <constraint firstAttribute="trailing" secondItem="oIj-XN-fVW" secondAttribute="trailing" constant="1" id="WIC-Bl-AV3"/>
-                <constraint firstItem="z7W-in-Yeh" firstAttribute="top" secondItem="oIj-XN-fVW" secondAttribute="bottom" constant="8" id="ijf-qa-x2y"/>
+                <constraint firstItem="Skn-Cx-sXh" firstAttribute="leading" secondItem="Lka-XV-LxP" secondAttribute="leading" id="X32-h6-4jj"/>
+                <constraint firstAttribute="trailing" secondItem="Skn-Cx-sXh" secondAttribute="trailing" id="gRu-63-VLS"/>
                 <constraint firstAttribute="bottom" secondItem="z7W-in-Yeh" secondAttribute="bottom" constant="8" id="mM6-mg-3Nn"/>
                 <constraint firstItem="Eiu-aC-DOV" firstAttribute="top" secondItem="Lka-XV-LxP" secondAttribute="top" constant="9" id="tl7-Zn-OPL"/>
+                <constraint firstItem="Skn-Cx-sXh" firstAttribute="top" secondItem="oIj-XN-fVW" secondAttribute="bottom" constant="8" id="xtT-iB-pyK"/>
                 <constraint firstAttribute="trailing" secondItem="z7W-in-Yeh" secondAttribute="trailing" constant="1" id="zRD-8R-iC1"/>
             </constraints>
             <connections>
                 <outlet property="iPadLabel" destination="oIj-XN-fVW" id="pQ5-AQ-VMc"/>
                 <outlet property="ipAddressLabel" destination="z7W-in-Yeh" id="K1d-ez-RPB"/>
                 <outlet property="lightroomLabel" destination="Eiu-aC-DOV" id="03b-Ba-Iul"/>
+                <outlet property="powerMateLabel" destination="Skn-Cx-sXh" id="WSf-P1-DOP"/>
             </connections>
-            <point key="canvasLocation" x="149" y="239"/>
+            <point key="canvasLocation" x="149" y="251.5"/>
         </customView>
     </objects>
 </document>

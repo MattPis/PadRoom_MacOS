@@ -89,6 +89,7 @@ class SocketServer: NSObject, GCDAsyncSocketDelegate {
     }
     
     func socket(_ sock: GCDAsyncSocket, didRead data: Data, withTag tag: Int) {
+        sock.readData(withTimeout: Constants.defaultReadTimeOut, tag: 0)
         delegate?.serverDidRead(data: data)
     }
     

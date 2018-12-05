@@ -13,11 +13,16 @@ import CocoaAsyncSocket
 protocol NetworkManagerDelegate {
     
     /// client is either accepted or disconneted
-    /// parameter: count - number of currently connected clients
+    /// - parameter count: number of currently connected clients
     func clientsCountHasChanged(_ count: Int)
     
     /// Lightrom clients connection has changed
+    /// - parameter connected: connection flag
     func lrConnectionHasChanged(_ connected: Bool)
+    
+    /// Network Manager did revieve adjustment parameter for PowerMate
+    /// - parameter param: selected param
+    func DidRecieveSelectedParameter(_ param: SelectedParameterMessage)
 }
 
 /// Manages network and Lightroom connections.
@@ -59,7 +64,8 @@ class NetworkManager: SocketServerDelegate, LightroomClientDelegate  {
     
     func serverDidRead(data: Data) {
         print("Did recieve data from LR: \(String(describing: String(data: data, encoding: .utf8)))")
-        lrSend.write(data)
+        guard let d = clientMessageRecieved(data: data) else { return }
+        lrSend.write(d)
     }
     
     ///MARK: - LR Delegate
@@ -70,6 +76,10 @@ class NetworkManager: SocketServerDelegate, LightroomClientDelegate  {
     func didRecieveDataFromLr(_ data: Data) {
         print("Did recieve data from LR: \(String(describing: String(data: data, encoding: .utf8)))")
         server.writeToClients(data)
+    }
+    
+    func writeToLr(_ data: Data) {
+        lrSend.write(data)
     }
     
     /// Returns IP address of WiFi interface as a String, or nil
@@ -100,6 +110,21 @@ class NetworkManager: SocketServerDelegate, LightroomClientDelegate  {
         freeifaddrs(ifaddr)
         
         return address
+    }
+}
+
+extension NetworkManager  {
+    
+    /// Intercept data from client app and parse for selected param.
+    /// Calls delegate if selected param present.
+    /// - parameter data: data form client app
+    /// - returns: data if no selectedTool present, nil if true
+    func clientMessageRecieved(data: Data) -> Data? {
+        guard let selectedParam = try? JSONDecoder().decode(SelectedParameterMessage.self, from: data) else {
+            return data
+        }
+        delegate?.DidRecieveSelectedParameter(selectedParam)
+        return nil
     }
 }
 

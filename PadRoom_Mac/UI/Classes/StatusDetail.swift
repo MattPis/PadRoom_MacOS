@@ -8,15 +8,19 @@
 
 import Cocoa
 
-class StatusDetail: NSView, NetworkManagerDelegate {
-    
+class StatusDetail: NSView, NetworkManagerDelegate, PowerMateDelegate {
+   
     @IBOutlet weak var ipAddressLabel: NSTextField!
     @IBOutlet weak var iPadLabel: NSTextField!
     @IBOutlet weak var lightroomLabel: NSTextField!
+    @IBOutlet weak var powerMateLabel: NSTextField!
     
+    var pmController: PowerMateController?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         NetworkManager.shared.delegate = self
+        pmController = PowerMateController(self)
         updateUi()
     }
     
@@ -42,4 +46,23 @@ class StatusDetail: NSView, NetworkManagerDelegate {
             : "Lightroom: Not Connected"
     }
     
+    func DidRecieveSelectedParameter(_ param: SelectedParameterMessage) {
+        pmController?.selectedParam = param
+    }
+    
+    ///MARK: - PowerMate Delegate
+    
+    func didConnect() {
+        DispatchQueue.main.async {
+            self.powerMateLabel.stringValue = "PowerMate: Connected"
+        }
+        
+    }
+    
+    func didDisconnect() {
+        DispatchQueue.main.async {
+            self.powerMateLabel.stringValue = "PowerMate: Not Connected"
+        }
+       
+    }
 }
