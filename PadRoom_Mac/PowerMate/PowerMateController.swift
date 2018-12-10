@@ -133,7 +133,7 @@ extension JSONEncoder {
     }
     
     static func encodeRotationMessage(r: PowerMateDirection, paramName: String, v: Float) -> Data? {
-        let m = RotationMessage(type: Constants.powerMateMessageType, paramName: paramName, rotation: r, value: v)
+        let m = RotationMessage(type: Constants.powerMateMessageType, name: paramName, rotation: r, value: v)
         var data = try? JSONEncoder().encode(m)
         data?.addEndOfLineSuffix()
         return data

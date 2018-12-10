@@ -19,9 +19,9 @@ struct SelectedParameterMessage: Codable {
     let type: Int
 }
 
-struct RotationMessage: Encodable {
+struct RotationMessage: Codable {
     let type: Int
-    let paramName: String
+    let name: String
     let rotation: PowerMateDirection
     let value: Float
 }

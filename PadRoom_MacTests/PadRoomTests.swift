@@ -39,12 +39,17 @@ class PadRoomTests: XCTestCase {
         let pName = "Exposure"
         let pValue: Float = 0.01
         
-        guard let rotationMessage = try? JSONEncoder.encodeRotationMessage(r: .left, paramName: pName, v: pValue) else {
+        guard let data = JSONEncoder.encodeRotationMessage(r: .left, paramName: pName, v: pValue) else {
             XCTFail()
             return
         }
-        XCTAssertEqual(param.name, pName)
-        XCTAssertEqual(param.value, pValue)
+        
+        guard let rotationMessage = try? JSONDecoder().decode(RotationMessage.self, from: data) else {
+            XCTFail()
+            return
+        }
+        XCTAssertEqual(rotationMessage.name, pName)
+        XCTAssertEqual(rotationMessage.value, pValue)
     }
 
     func testPerformanceExample() {
