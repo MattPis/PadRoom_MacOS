@@ -25,7 +25,7 @@ class PowerMateController {
     
     /// PowerMate rotation adjusts parameter selected by Wifi Client App.
     /// Parameter floating precision can very. Default = 1.0
-    var selectedParam: SelectedParameterMessage? = SelectedParameterMessage()
+    var selectedParam: SelectedParameterMessage? = SelectedParameterMessage(val: 01, name: "Exposure", type: 4)
     
     /// Create PowerMate controller
     /// parameter: d - PowerMateDelegate
@@ -90,10 +90,10 @@ class PowerMateController {
     ///Procoesses device's data
     /// - parameter data: device's data
     func processHidData(_ data: Data) {
-        if data[Constants.powerMateButtonIndex] == 1 {
+        if data[Constants.powerMateButtonIndex] != 0 {
             processButton()
         }
-        else if data[Constants.powermateRotationIndex] == 1 {
+        else if data[Constants.powermateRotationIndex] != 0 {
             processRotation(data)
         }
     }
@@ -101,7 +101,8 @@ class PowerMateController {
     ///Procoesses device's button click data, creates a json and sends to Lightroom
     /// - parameter data: device's data
     func processButton() {
-        guard let data = encodeResetMessage() else { return }
+        guard let s = selectedParam else { return }
+        guard let data = JSONEncoder.encodeResetMessage(param: s) else { return }
         NetworkManager.shared.writeToLr(data)
     }
     
@@ -115,21 +116,24 @@ class PowerMateController {
         let rotationData = HIDDevice.rotationFromData(data)
         guard let rotationDirection = PowerMateDirection(rawValue: rotationData) else { return }
         
-        guard let json = encodeRotationMessage(r: rotationDirection, paramName: s.name, v: value) else { return }
+        guard let json = JSONEncoder.encodeRotationMessage(r: rotationDirection, paramName: s.name, v: value) else { return }
         NetworkManager.shared.writeToLr(json)
     }
     
-    func encodeResetMessage() -> Data? {
-        guard let s = selectedParam else { return nil }
-        let m = ResetParameterMessage(type: 1, actionType: 0, name: s.name)
+    
+}
+
+extension JSONEncoder {
+    static func encodeResetMessage(param: SelectedParameterMessage) -> Data? {
+        let m = ResetParameterMessage(name: param.name)
         let data = try? JSONEncoder().encode(m)
         guard var d = data else { return nil }
         d.addEndOfLineSuffix()
         return d
     }
     
-    func encodeRotationMessage(r: PowerMateDirection, paramName: String, v: Float) -> Data? {
-        let m = PowerMateMessage(type: Constants.powerMateMessageType, paramName: paramName, rotation: r, value: v)
+    static func encodeRotationMessage(r: PowerMateDirection, paramName: String, v: Float) -> Data? {
+        let m = RotationMessage(type: Constants.powerMateMessageType, paramName: paramName, rotation: r, value: v)
         var data = try? JSONEncoder().encode(m)
         data?.addEndOfLineSuffix()
         return data

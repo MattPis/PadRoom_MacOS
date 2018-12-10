@@ -13,20 +13,21 @@ public enum PowerMateDirection: UInt8, Codable {
     case right = 1
 }
 
-struct PowerMateMessage: Encodable {
+struct SelectedParameterMessage: Codable {
+    let val: Float
+    let name: String
+    let type: Int
+}
+
+struct RotationMessage: Encodable {
     let type: Int
     let paramName: String
     let rotation: PowerMateDirection
     let value: Float
 }
 
-struct SelectedParameterMessage: Codable {
-    let val: Float = 0.01
-    let name: String = "Exposure"
-}
-
 struct ResetParameterMessage: Codable {
-    let type: Int
-    let actionType: Int
+    let type = 1
+    let actionType = 0
     let name: String
 }

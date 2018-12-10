@@ -11,6 +11,8 @@
 		529FEF8982C4EFA569914FD1 /* Pods_PadRoom_Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA53E80EC18D4EF5B10B5E1 /* Pods_PadRoom_Mac.framework */; };
 		C97885BF21B6264100E52B0A /* PowerMateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97885BE21B6264100E52B0A /* PowerMateController.swift */; };
 		C97885C121B7987200E52B0A /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97885C021B7987200E52B0A /* Structs.swift */; };
+		C97885C321B7A38200E52B0A /* PadRoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97885C221B7A38200E52B0A /* PadRoomTests.swift */; };
+		C97885C421B7A46300E52B0A /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97885C021B7987200E52B0A /* Structs.swift */; };
 		C97A608521A89566001F9D48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A608421A89566001F9D48 /* AppDelegate.swift */; };
 		C97A608721A89567001F9D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97A608621A89567001F9D48 /* Assets.xcassets */; };
 		C97A608A21A89567001F9D48 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97A608821A89567001F9D48 /* MainMenu.xib */; };
@@ -22,6 +24,11 @@
 		C97A60BB21AE23EA001F9D48 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A60BA21AE23EA001F9D48 /* MainMenuController.swift */; };
 		C97A60BD21AE24A3001F9D48 /* StatusDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A60BC21AE24A3001F9D48 /* StatusDetail.swift */; };
 		C97A60BF21AF3702001F9D48 /* LightroomClinet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A60BE21AF3702001F9D48 /* LightroomClinet.swift */; };
+		C9BA768821B7A5AB0021406F /* PowerMateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97885BE21B6264100E52B0A /* PowerMateController.swift */; };
+		C9BA768921B7A74C0021406F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A60B321A8B29A001F9D48 /* Constants.swift */; };
+		C9BA768A21B7A77A0021406F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A60B521ADBFF9001F9D48 /* NetworkManager.swift */; };
+		C9BA768B21B7A7900021406F /* SocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A60B021A8AB41001F9D48 /* SocketServer.swift */; };
+		C9BA768C21B7A7980021406F /* LightroomClinet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A60BE21AF3702001F9D48 /* LightroomClinet.swift */; };
 		DE0CA44AE4A8D93A6D6C8B3B /* Pods_PadRoom_MacUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152CFD0C451F333790798250 /* Pods_PadRoom_MacUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +60,7 @@
 		9F6D80537205E455C43BC818 /* Pods-PadRoom_Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PadRoom_Mac.release.xcconfig"; path = "Target Support Files/Pods-PadRoom_Mac/Pods-PadRoom_Mac.release.xcconfig"; sourceTree = "<group>"; };
 		C97885BE21B6264100E52B0A /* PowerMateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerMateController.swift; sourceTree = "<group>"; };
 		C97885C021B7987200E52B0A /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		C97885C221B7A38200E52B0A /* PadRoomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadRoomTests.swift; sourceTree = "<group>"; };
 		C97A608121A89566001F9D48 /* PadRoom_Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PadRoom_Mac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97A608421A89566001F9D48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C97A608621A89567001F9D48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				C97A609521A89567001F9D48 /* PadRoom_MacTests.swift */,
+				C97885C221B7A38200E52B0A /* PadRoomTests.swift */,
 				C97A609721A89567001F9D48 /* Info.plist */,
 			);
 			path = PadRoom_MacTests;
@@ -479,6 +488,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9BA768B21B7A7900021406F /* SocketServer.swift in Sources */,
+				C9BA768A21B7A77A0021406F /* NetworkManager.swift in Sources */,
+				C9BA768921B7A74C0021406F /* Constants.swift in Sources */,
+				C9BA768821B7A5AB0021406F /* PowerMateController.swift in Sources */,
+				C9BA768C21B7A7980021406F /* LightroomClinet.swift in Sources */,
+				C97885C421B7A46300E52B0A /* Structs.swift in Sources */,
+				C97885C321B7A38200E52B0A /* PadRoomTests.swift in Sources */,
 				C97A609621A89567001F9D48 /* PadRoom_MacTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
